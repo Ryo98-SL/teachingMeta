@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>APP</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./nav_1.css" /> -->
+    <style>
+    #main{
+        padding: 0;
+    }
+
+		#wrap{
+		    height: 100%;
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-box-orient: vertical;
+		    -webkit-flex-flow: column;
+		    flex-flow: column;
+		}
+		/*轮播图*/
+	    .swipe {
+	        overflow: hidden;
+	        position: absolute;
+	        width: 100%;
+	        left: 0;
+	        top: 0;
+	    }
+	    .swipe-wrap {
+	        overflow: hidden;
+	        position: relative;
+	    }
+	    .swipe-wrap .swipe-box {
+	        float: left;
+	        width: 100%;
+	        position: relative;
+	    }
+	    .swipe-wrap img {
+	        width: 92%;
+          margin: 15px;
+	        display: block;
+	    }
+
+      .frame_vip img {
+        margin: 0px 15px 15px 15px;
+        width: 92%;
+        height: 66px;
+        display: block;
+      }
+
+      .nav_top_block_div {
+        width: 100%;
+        height: 15.8px;
+        background-color: #EFEFEF;
+      }
+
+	    #title-box {
+	        height: 30px;
+	        width: 100%;
+	        position: absolute;
+	        left: 0;
+	        top: 145px;
+	        /*background-color: rgba(0,0,0,0.3);*/
+	    }
+	    #title-box-text {
+	        color: #FFF;
+	        text-align: left;
+	        text-indent: 1em;
+	        line-height: 30px;
+	    }
+	    #title-box-ul {
+	        position: absolute;
+	        right: 0;
+	        top: 0;
+	        padding-right: 15px;
+	        font-size: 1em;
+	    }
+	    #title-box-ul li.active {
+	        background: url(../../image/frame0101cover/slider_dot_current.png) transparent center center no-repeat;
+	        background-size: 8px 8px;
+	    }
+	    #title-box-ul li {
+	        width: 11px;
+	        height: 30px;
+	        line-height: 30px;
+	        float: left;
+	        background: url(../../image/frame0101cover/slider_dot.png) transparent center center no-repeat;
+	        background-size: 8px 8px;
+	    }
+
+	    .hidden{
+	        display: none !important;
+	    }
+	/*轮播图 end*/
+  /*导航栏4个按钮*/
+    #nav_top{
+      padding-top: 9.2px;
+      padding-left: 45.8px;
+      padding-right: 45.8px;
+      margin: 0 0.6em 0 0.6em;
+    }
+    #nav_top .nav_top_list{
+        background-color: #FFFFFF;
+        overflow: hidden;
+    }
+
+    #nav_top .nav_top_li{
+        background-color: #FFFFFF;
+        border-radius: 3px;
+        float: left;
+        width: 25%;
+    }
+    #nav_top .nav_top_li:active,#nav_top .nav_top_li.tap-active{
+        background-color: #FFFFFF;
+    }
+    #nav_top .text{
+        float: left;
+        text-indent: 6px;
+        color: #FFFFFF;
+        font-size: 0.75em;
+        line-height: 2em;
+    }
+    #nav_top .nav_top_li {
+        float: left;
+        margin: 7px;
+        padding: 12px;
+        width: 1.5em;
+        height: 1.5em;
+    }
+    #nav_top .score {
+        background: url(../../image/frame0101cover/index_icon_score.png) center center no-repeat;
+        background-size: 100% 100%;
+    }
+    #nav_top .recharge {
+        background: url(../../image/frame0101cover/index_icon_recharge.png) center center no-repeat;
+        background-size: 100% 100%;
+    }
+    #nav_top .lottery {
+        background: url(../../image/frame0101cover/index_icon_lottery.png) center center no-repeat;
+        background-size: 100% 100%;
+    }
+    #nav_top .ju {
+        background: url(../../image/frame0101cover/index_icon_ju.png) center center no-repeat;
+        background-size: 100% 100%;
+    }
+    #nav_top .frame_101_mark {
+       width: 100%; position: absolute; left: 0px; -webkit-transition: 300ms; text-align: center; height: 1px; background-color: #EFEFEF;
+    }
+  /*导航栏4个按钮 end*/
+  /*今日限免*/
+      .container .title{
+          text-indent: 50px;
+          color: #BDBDBD;
+          font-size: 0.8em;
+          width: 100%;
+          display: block;
+      }
+      .reload_header{
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          width: 100%;
+      }
+      .reload_header .title{
+          float: left;
+          width: auto;
+      }
+      .reload_header .reload{
+          float: right;
+          padding-right: 50px;
+          color: #BDBDBD;
+          border-radius: 3px;
+          text-align: center;
+          width: 5em;
+          font-size: 0.8em;
+          height: 1.5em;
+          line-height: 1.4em;
+
+      }
+      .reload_header .reload .reload_icon{
+          width: 1em;
+          height: 1em;
+          display: inline-block;
+          background: url(../../image/frame0101cover/tm_home_refresh_small_normal.png) center center no-repeat;
+          background-size: 100% 100%;
+          vertical-align: baseline;
+      }
+      .reload_header .reload:active,.reload_header .reload.tap-active{
+          background-color: #666666;
+      }
+      .reload_header .reload:active .reload_icon,.reload_header .reload.tap-active .reload_icon{
+          background: url(../../image/frame0101cover/tm_home_refresh_small_press.png) center center no-repeat;
+          background-size: 100% 100%;
+      }
+      .frame101_exempt img {
+        height: 93px;
+        margin: 0px 15px 15px 15px;
+        width: 92%;
+        display: block;
+      }
+
+      .container .frame_101_mark {
+         width: 100%; position: absolute; left: 0px; -webkit-transition: 300ms; text-align: center; height: 1px; background-color: #EFEFEF; padding: 0px 10px 0px 10px;
+      }
+
+      .container .exempt {
+        padding-bottom: 1px;
+      }
+
+      .container .metas {
+        padding-bottom: 1px;
+      }
+
+      .container .top_list {
+        padding-bottom: 1px;
+      }
+
+      .container .latest_course {
+        padding-bottom: 1px;
+      }
+
+      .course_item{
+          display: flex;
+          margin-bottom:24px;
+      }
+      .course_detail{
+          display: flex;
+          flex-direction: column;
+          margin-left: 60px;
+      }
+      .intro_name{
+          font-size: 28px;
+      }
+
+      .latest_course:nth-child(2) > course_item:nth-child(2) .course_icon{
+          background-image: url(./course_icon1.png);
+      }
+      .latest_course{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .course_icon{
+          width: 300px;
+          height: 300px;
+      }
+      .button_icon1{
+          background-image: url(./feedback_icon.png);
+          background-size: 50% 50%;
+      }
+      .button_icon2{
+          background-image: url(./hot_icon.png);
+          background-size: 50% 50%;
+      }
+      .button_icon{
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 60px;
+        height: 60px;
+      }
+
+      .detail_button{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 20px;
+      }
+      .detail_intro{
+          margin-bottom: 20px;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+            <!-- 轮播图 -->
+            <div id='slider' class='swipe'>
+                <div class='swipe-wrap'>
+                    <div class="swipe-box" tapmode="tap-active" data-url="" data-title="新书" onclick="toDetail(this);">
+                        <img src="../../image/frame0101cover/frame0101cover01.png" alt="推荐">
+                    </div>
+                    <div class="swipe-box" tapmode="tap-active" data-url="" data-title="新书" onclick="toDetail(this);">
+                        <img src="../../image/frame0101cover/frame0101cover01.png" alt="推荐">
+                    </div>
+                    <div class="swipe-box" tapmode="tap-active" data-url="" data-title="新书" onclick="toDetail(this);">
+                        <img src="../../image/frame0101cover/frame0101cover01.png" alt="推荐">
+                    </div
+                </div>
+            </div>
+            <div id="title-box">
+                <ul id="title-box-ul">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="frame_vip" tapmode="tap-active" data-url="" data-title="vip" onclick="toDetail(this);">
+                <img src="../../image/privilegeCard_icon.png" alt="vip">
+            </div>
+            <!-- 诗书礼仪上方横条 -->
+            <div class="nav_top_block_div">
+
+            </div>
+            <!-- 轮播图 end -->
+            <!-- 上方导航栏 -->
+            <div id="nav_top">
+                <ul class="nav_top_list">
+                    <li class="nav_top_li score" tapmode="tap-active" data-url="" data-title="诗" onclick="toDetail(this);"></li>
+                    <li class="nav_top_li recharge" tapmode="tap-active" data-url="" data-title="书" onclick="toDetail(this);"></li>
+                    <li class="nav_top_li lottery" tapmode="tap-active" data-url="" data-title="礼" onclick="toDetail(this);"></li>
+                    <li class="nav_top_li ju" tapmode="tap-active" data-url="" data-title="仪" onclick="toDetail(this);"></li>
+                </ul>
+                <mark class="frame_101_mark"></mark>
+            </div>
+            <!-- 上方导航栏 end-->
+            <!-- 下方详情 -->
+            <div class="container">
+            		<div class="exempt">
+                    <div class="reload_header">
+                        <span class="title">今日限免</span>
+                        <span class="reload">
+                            <i class="reload_icon"></i>
+                            更多...
+                        </span>
+                    </div>
+                    <div class="frame101_exempt" tapmode="tap-active" data-url="" data-title="新书" onclick="toDetail(this);">
+                        <img src="../../image/frame0101cover/frame0101today.png" alt="推荐">
+                    </div>
+								</div>
+                <mark class="frame_101_mark"></mark>
+                <div class="metas">
+                    <div class="reload_header">
+                        <span class="title">元典大咖</span>
+                        <span class="reload">
+                            <i class="reload_icon"></i>
+                            更多...
+                        </span>
+                    </div>
+                    <div class="frame101_exempt" tapmode="tap-active" data-url="" data-title="新书" onclick="toDetail(this);">
+                        <img src="../../image/frame0101cover/frame0101meta.png" alt="推荐">
+                    </div>
+                </div>
+                <mark class="frame_101_mark"></mark>
+                <div class="latest_course">
+                    <div class="reload_header">
+                        <span class="title">最新课程</span>
+                        <span class="reload">
+                            <i class="reload_icon"></i>
+                            更多...
+                        </span>
+                    </div>
+                    <div class="course_item">
+                        <div class="course_icon"></div>
+                        <div class="course_detail">
+                            <div class="detail_intro">
+                                <div class="intro_name">《金韵 西施浣纱》</div>
+                                <div class="intro_type">韵乐乐享会</div>
+                            </div>
+                            <div class="detail_time">
+                                <div class="time_videoLen">时长:07:22</div>
+                                <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                            </div>
+                            <div class="detail_buttons">
+                                <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                                <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+						</div>
+            <!-- 下方详情 end -->
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/swipe.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+			var aLi = $api.domAll('#title-box-ul li');
+			// var act_title = $('#title-box-text');
+			window.mySwipe = Swipe($api.byId('slider'),{
+					auto: 3000,
+					continuous: true,
+					callback: function(index,elem) {
+              if (index > 2) { return }
+							var i = aLi.length;
+							while (i--) {
+									// alert(i);
+									aLi[i].className = '';
+							}
+              if (index <= 2) {
+                aLi[ index ].className = 'active';
+              }
+							// var text = $(elem).find('img').attr('alt');
+							// act_title.text(text);
+					}
+			});
+    }
+
+    // 用于链接到淘宝链接
+    var toDetail = function(obj){
+        var url = $api.attr(obj,'data-url');
+        var title = $api.attr(obj,'data-title');
+
+        api.execScript({
+            name: 'root',
+            script: 'indexToDetail("'+title+'","'+url+'")'
+        });
+    };
+    // apiready();
+</script>
+</html>

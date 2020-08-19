@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+}
+html{
+  font-size: 6px
+}
+.bofang_nav_flex{
+    display: flex;
+    padding-top: 3.125rem;
+    justify-content: space-between;
+    background-color: rgb(253, 253, 253);
+    flex-grow: 1;
+    border-bottom: 4px solid rgb(219, 219, 220);
+    height: 7.5rem;
+}
+.nav_left{
+    display: flex;
+    align-items: center;
+}
+.nav_right{
+    display: flex;
+    align-items: center;
+}
+
+.backButton{
+    font-size: 4.375rem;
+    font-family: Georgia;
+    width: 4.375rem;
+    color: #000;
+}
+.backContent{
+    font-size: 38px;
+    color: #666;
+
+}
+.nav_left div{
+    text-align: center;
+    line-height: 4.375rem;
+    height: 4.375rem;
+}
+.imageContainer{
+
+    width: 3.125rem;
+    height: 3.125rem;
+    margin:0.9375rem;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 90% 90%;
+
+}
+.image_item{
+    font-size: 1.4375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6.25rem;
+}
+.nav_right div:nth-child(1) .imageContainer{
+    background-image: url(./dy_icon.png);
+
+}
+.nav_right div:nth-child(2) .imageContainer{
+    background-image: url(./feedback_icon.png);
+
+}
+.nav_right div:nth-child(3) .imageContainer{
+    background-image: url(./hot_icon.png);
+
+}
+.nav_right div:nth-child(4) .imageContainer{
+    background-image: url(./more_icon.png);
+
+}
+.nav_right div:nth-child(5) .imageContainer{
+    background-image: url(./fenxiang_icon.png);
+    margin-right: 0.9375rem;
+
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>导航测试</title>
+        <link href="./nav_1.css" type="text/css" rel="stylesheet"/>
+        <style>
+            *{
+                margin: 0;
+            }
+            html{
+                width: 100%;
+            }
+            .page_container .course_infos:nth-child(12) .course_icon{
+                background-image: url(./post.png);
+
+                background-size: 100% 100%;
+
+            }
+            .page_container .course_infos:nth-child(15) .course_icon{
+                background-image: url(./post2.png);
+
+                background-size: 100% 100%;
+
+            }
+            .page_container .course_infos:nth-child(18) .course_icon{
+                background-image: url(./course_icon1.png);
+
+                background-size: 100% 100%;
+
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+            <div class="fist_image"></div>
+            <div class="privilegeCard"></div>
+            <div class="partion"></div>
+            <div class="slogans" style="justify-content: space-evenly; width: 100%;">
+                <div class="slogan" style="width:100px;font-size: 50px;">诗</div>
+                <div class="slogan" style="width:100px;font-size: 50px;">书</div>
+                <div class="slogan" style="width:100px;font-size: 50px;">礼</div>
+                <div class="slogan" style="width:100px;font-size: 50px;">仪</div>
+        </div>
+        <div class="tinyPartion2"></div>
+        <div class="tiny_title tiny1">
+            <div class="tinty_part1">今日限免</div>
+
+            <div class="tinty_part3"><div class="more_icon"></div>更多...</div>
+        </div>
+        <div class="fist_iamge2"></div>
+        <div class="tiny_title tiny1">
+            <div class="tinty_part1">元典大咖</div>
+
+            <div class="tinty_part3"><div class="more_icon"></div>更多...</div>
+        </div>
+
+        <div class="people_image"></div>
+
+        <div class="tinyPartion2"></div>
+        <div class="tiny_title tiny1">
+            <div class="tinty_part1">最新课程</div>
+
+            <div class="tinty_part3"><div class="more_icon"></div>更多...</div>
+        </div>
+
+            <div class="course_infos">
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div><div>添加收藏</div></div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div><div>热度 1376</div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tinyPartion2"></div>
+            <div class="tiny_title tiny1">
+                <div class="tinty_part1">Top5榜单</div>
+
+                <div class="tinty_part3"><div class="more_icon"></div>更多...</div>
+            </div>
+
+                <div class="course_infos">
+                    <div class="course_item">
+                        <div class="course_icon"></div>
+                        <div class="course_detail">
+                            <div class="detail_intro">
+                                <div class="intro_name">《金韵 西施浣纱》</div>
+                                <div class="intro_type">韵乐乐享会</div>
+                            </div>
+                            <div class="detail_time">
+                                <div class="time_videoLen">时长:07:22</div>
+                                <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                            </div>
+                            <div class="detail_buttons">
+                                <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div><div>添加收藏</div></div>
+                                <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div><div>热度 1376</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tinyPartion2"></div>
+                <div class="tiny_title tiny1">
+                    <div class="tinty_part1">猜你喜欢</div>
+
+                    <div class="tinty_part3"><div class="more_icon"></div>更多...</div>
+                </div>
+
+                    <div class="course_infos">
+                        <div class="course_item">
+                            <div class="course_icon"></div>
+                            <div class="course_detail">
+                                <div class="detail_intro">
+                                    <div class="intro_name">《金韵 西施浣纱》</div>
+                                    <div class="intro_type">韵乐乐享会</div>
+                                </div>
+                                <div class="detail_time">
+                                    <div class="time_videoLen">时长:07:22</div>
+                                    <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                                </div>
+                                <div class="detail_buttons">
+                                    <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div><div>添加收藏</div></div>
+                                    <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div><div>热度 1376</div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tinyPartion2"></div>
+
+            <div class="updownArror">︾</div>
+        </div>
+    </div>
+    </body >
+</html>

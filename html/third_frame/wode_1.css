@@ -1,0 +1,207 @@
+html{
+    height:100%;
+    font-size: 6px
+}
+body{
+    height:100%;
+}
+.page_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    /* align-items: center; */
+    height: 100%;
+}
+.login_body{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    position: relative;
+}
+.footer{
+    flex-grow: 1;
+}
+.login_title{
+    font-size: 4.7rem;
+
+    padding: 5rem 3.9rem;
+}
+#getCode{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+.login_input{
+    display: flex;
+    font-size: 2.5rem;
+    margin: 1.25rem;
+    border-bottom:1px solid rgb(143, 143, 143) ;
+
+}
+.login_getCode{
+    width: 80%;
+    height: 4.1875rem;
+    border-radius: 0.9rem;
+    background-color: rgb(193, 24, 33);
+    text-align: center;
+    line-height: 4.1875rem;
+    margin: 1.875rem;
+
+}
+.login_regist{
+    width: 80%;
+    height: 4.1875rem;
+    border-radius: 0.9rem;
+    background-color: rgb(253,253,253);
+    text-align: center;
+    line-height: 4.1875rem;
+    margin: 1.875rem;
+    border: 1px solid rgb(193, 24, 33)
+
+}
+#regist{
+    text-decoration: none;
+    color: rgb(193, 24, 33);
+    font-size: 2.5rem;
+}
+#input_telFore{
+    font-size: 2.5rem;
+    border: none;
+    margin-right:0.625rem ;
+    background-color: rgb(253,253,253);
+}
+#input_element{
+    height: 2.8125rem;
+    font-size: 2.5rem;
+    outline: none;
+    border: none;
+    background-color: rgb(253,253,253);
+
+}
+.login_codeInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.codeSquare{
+
+    margin:1rem;
+}
+.input_element2{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.tip{
+    font-size: 1rem;
+
+}
+.login_codeTip1{
+    margin: 2.5rem;
+}
+.login_codeTip2{
+    color:rgb(143, 143, 143);
+    position: absolute;
+    bottom: 1.25rem;
+}
+.login_otherWays{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 3.75rem;
+}
+.login_otherWays div:nth-child(1){
+    background-image: url(./weixin.png);
+
+}
+.login_otherWays div:nth-child(2){
+    background-image: url(./qq.png) ;
+
+}
+.login_otherWays div:nth-child(3){
+    background-image: url(./weibo.png);
+
+}
+.login_otherWays div{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.other_image{
+width: 4.6875rem;
+height: 4.6875rem;
+
+}
+#code_tip_contract{
+    color:rgb(143, 143, 143)
+}
+#wode3_input{
+    width: 70%;
+}
+#wode3_input div{
+    margin-top: 3.75rem;
+}
+.partion{
+    height: 1.5625rem;
+    width: 100%;
+    background-color: rgb(237, 237, 237);
+}
+#wode9_tip{
+    color: rgb(143, 143, 143);
+    width:15.2375rem;
+    height: 2.8125rem;
+    align-self: center;
+    margin-top: 3.125rem;
+}
+.idcard_square{
+    display: flex;
+    position: relative;
+    left: 1.25rem;
+}
+.square_image{
+    margin:1.875rem 1.875.rem 3.75rem 1.875rem;
+    font-size: 4.6855rem    ;
+    line-height: 7.1875rem;
+    text-align: center;
+    width: 7.8125rem;
+    height: 7.8125rem;
+    border: 2px solid rgb(143, 143, 143);
+    color:rgb(143, 143, 143);
+}
+.attentions{
+    margin-top: 5rem;
+    color: rgb(143, 143, 143);
+    width: 80%;
+    position: relative;
+    left: 3.125rem;
+
+}
+.attention {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+}
+ .attentions .attention:nth-child(1){
+     justify-content: flex-start;
+ }
+ #wode10_partion{
+        margin-top: 4.375rem;
+
+ }
+ .wode11_tip{
+     display: flex;
+     font-size: 2.5rem;
+     margin-top: 3.75rem;
+     color: rgb(143, 143, 143);
+
+ }
+ #tixian_amount{
+     margin-left: 1.25rem;
+ }

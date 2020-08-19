@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>登录</title>
+
+    <link href="./login_1.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="login_container">
+        <div class="surface_container"></div>
+        <div class="privilegeContent">
+            <div class="content_itme">注册并送7天免费VIP</div>
+            <div class="content_itme">新用户登录即可领取7天免费VIP</div>
+        </div>
+        <div class="login_button button1" onclick="openNewWin('username_login')">微信登录</div>
+        <div class="login_button button2" onclick="openNewWin('signup')">手机号登录</div>
+    </div>
+    </body>
+
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript">
+      function openNewWin (winname) {
+      	api.openWin({
+      		name: winname,
+      		url: './'+ winname +'.html',
+      		delay:200
+      	});
+      }
+      apiready = function  () {
+    	}
+    </script>
+</html>

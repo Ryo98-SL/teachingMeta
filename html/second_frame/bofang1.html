@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>播放模板</title>
+    <link href="./nav_1.css" type="text/css" rel="stylesheet"/>
+    <link href="./bofang_nav.css" type="text/css" rel="stylesheet"/>
+    <link href="./bofang_1.css" type="text/css" rel="stylesheet"/>
+
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+        <div class="bofang_nav_flex">
+            <div class="nav_left">
+                <div class="backButton"><</div>
+                <div id="backWords" class="backContent">视频播放</div>
+            </div>
+            <div class="nav_right">
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">订阅</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">收藏</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">热度1376</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">更多</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">分享</div></div>
+            </div>
+        </div>
+        <div class="page_body">
+            <div class="video_intro">
+                <div class="video_name video_intro_sub"><div>正在播放:</div><div class="video_entity_name">《金韵 西施浣纱》</div><div class="video_entity_type">韵乐乐享会</div></div>
+                <div class="video_len video_intro_sub"><div>时间 :</div><div class="video_entity_len">07:22</div></div>
+                <div class="video_src video_intro_sub"><div>用户上传时间:</div><div class="video_entity_time">2020年02月02日</div></div>
+            </div>
+            <div  class="video_entity">
+                <video width="980" poster="./videoPoster.png" src="#"  controls>
+
+                </video>
+            </div>
+            <div class="tiny_title tiny" ><div>推荐</div></div>
+            <div class="course_infos">
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="updownArror">︾</div>
+
+
+
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+    <span  style="font-size:40px" tapmode="hover" onclick="fnOpenPlay()">openPlay</span>
+    <frame id="videoFrame"></frame>
+</html>
+<script>
+function fnOpenPlay(){
+  var videoPlayer = api.require('videoPlayer');
+videoPlayer.openPlay({
+rect:
+{   x: 0,
+    y : 62,
+    w : 360,
+    h:170
+
+},
+texts: {
+    head: {
+        title: '示例视频'
+    }
+},
+styles: {
+    head: {
+        bg: 'rgba(193,193,193,0.5)',
+        height:33 ,
+        y:0,
+        titleSize: 18,
+        titleColor: '#fff',
+        backSize:22,
+        backImg: 'fs://img/back.png',
+        customButtons:[{}],
+    },
+    foot: {
+        bg: 'rgba(193,193,193,0.5)',
+        height: 33,
+        playSize: 22,
+        playImg: 'fs://img/paly.png',
+        pauseImg: 'fs://img/pause.png',
+        timeSize: 14,
+        timeColor: '#fff',
+        sliderImg: 'fs://img/slder.png',
+        progressColor: '#696969',
+        progressSelected: '#76EE00',
+        verticalImg:'fs://img/vertical.png',
+        horizontalImg:'fs://img/horizontal.png',
+        lockImg:'',
+        unlockImg:'',
+    }
+},
+ onFixed:'videoFrame',
+path: 'http://p3d0v5v8l.bkt.clouddn.com/1.1%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%EF%BC%8B%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87.mp4', //（可选项）字符串类型；文档的路径，支持网络和本地（fs://）路径；默认：未传值时不播放
+//在 android 平台上不支持 widget://
+
+autoPlay: true //（可选项）布尔类型；打开时是否自动播放；默认：true（自动播放）
+}, function(ret, err) {
+// if (ret) {
+//     alert(JSON.stringify(ret));
+//         } else {
+//     alert(JSON.stringify(err));
+// }
+});
+}
+</script>

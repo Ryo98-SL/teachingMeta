@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>用户成功登录界面</title>
+    <link href="./wode_nav.css" type="text/css" rel="stylesheet"/>
+    <link href="./wode_2.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+        <div class="wode_nav_flex">
+            <div class="nav_left">
+                <div class="backButton"><</div>
+                <div id="backWords" class="backContent"></div>
+            </div>
+            <div class="nav_right">
+                <div  class="imageContainer"></div>
+                <div class="imageContainer"></div>
+                <div class="imageContainer"></div>
+            </div>
+        </div>
+        <div class="page_body">
+            <div class="login_section">
+                <div class="login_section_icon" onclick="openNewWin('person_setting')"></div>
+                <div class="login_section_content">
+                    <div class="login_section_click" id="wode6_login_section_click" onclick="openNewWin('person_setting')">账号名XXX<div id="alter_icon"></div></div>
+                    <div class="clickContent" id="wode6_userContent">
+                        <div id="userGrade" style="line-height:3rem">VIP5</div><div id="deadline" >截止时间2020.12.12</div>
+                    </div>
+                </div>
+            </div>
+            <div class="partion"></div>
+            <div class="moreService">
+                <div class="more_service" onclick="openNewWin('withdraw_history')">
+                    <div class="serviceIcon"></div>
+                    <div class="serviceDesc">历史记录</div>
+                </div>
+                <div class="more_service" onclick="openNewWin('withdraw_history')">
+                    <div class="serviceIcon"></div>
+                    <div class="serviceDesc">收藏记录</div>
+                </div>
+                <div class="more_service" onclick="openNewWin('mine_account')">
+                    <div class="serviceIcon_wode6"></div>
+                    <div class="serviceDesc">我的账户</div>
+                </div>
+            </div>
+            <div class="partion"></div>
+            <div class="service_row_vertical">
+                <div class="row_vertical_item" onclick="openNewWin('mine_account')"><div class="row_vertical_icon"></div><div class="row_vertical_content">送礼品卡</div></div>
+                <div class="row_vertical_item" onclick="openNewWin('mine_account')"><div class="row_vertical_icon"></div><div class="row_vertical_content">邀请有礼</div></div>
+                <div class="row_vertical_item" onclick="openNewWin('mine_account')"><div class="row_vertical_icon"></div><div class="row_vertical_content">建议反馈</div></div>
+                <div class="row_vertical_item" onclick="openNewWin('mine_account')"><div class="row_vertical_icon"></div><div class="row_vertical_content">帮助客服</div></div>
+
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript">
+      function openNewWin (winname) {
+      	api.openWin({
+      		name: winname,
+      		url: './'+ winname +'.html',
+      		delay:200
+      	});
+      }
+
+      apiready = function  () {
+    	}
+    </script>
+</html>

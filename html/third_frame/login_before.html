@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>未登录</title>
+    <link href="./wode_nav.css" type="text/css" rel="stylesheet"/>
+    <link href="./wode_2.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body >
+        <div class="page_container">
+        <div class="wode_nav_flex_container">
+          <div class="wode_nav_flex">
+              <div class="nav_left">
+                  <div class="backButton"><</div>
+                  <div id="backWords" class="backContent"></div>
+              </div>
+              <div class="nav_right">
+                  <div  class="imageContainer"></div>
+                  <div class="imageContainer"></div>
+                  <div class="imageContainer"></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="page_body">
+            <div class="login_section">
+                <div class="login_section_icon" onclick="openNewWin('login')"></div>
+                <div class="login_section_content">
+                    <div class="login_section_click" onclick="openNewWin('login')">点击登录</div>
+                    <div class="clickContent">登录后观看更多精彩课程</div>
+                </div>
+            </div>
+            <div class="partion"></div>
+            <div class="moreService">
+                <div class="more_service">
+                    <div class="serviceIcon"></div>
+                    <div class="serviceDesc" onclick="openNewWin('withdraw_history')">历史记录</div>
+                </div>
+                <div class="more_service">
+                    <div class="serviceIcon"></div>
+                    <div class="serviceDesc" onclick="openNewWin('sugesst')">建议反馈</div>
+                </div>
+                <div class="more_service">
+                    <div class="serviceIcon"></div>
+                    <div class="serviceDesc" onclick="openNewWin('helpserver')">帮助客服</div>
+                </div>
+                <div class="more_service">
+                    <div class="serviceIcon"></div>
+                    <div class="serviceDesc" onclick="openNewWin('vipbuy')">VIP购买</div>
+                </div>
+            </div>
+            <div class="buyPrivilege"></div>
+        </div>
+        <!-- <div class="footer"></div> -->
+    </div>
+    </body>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript">
+      // function goback () {
+      // 	api.closeWin({name:'usercenter'});
+      // }
+
+      /*
+      * 先判断用户是否已经注册
+      * 如果注册过，直接跳转到登录界面
+      * 否则转到注册界面
+      */
+      function openNewWin (winname) {
+      	api.openWin({
+      		name: winname,
+      		url: './'+ winname +'.html',
+      		delay:200
+      	});
+      }
+
+      apiready = function  () {
+
+          $api.fixStatusBar( $api.dom('.wode_nav_flex_container'))
+
+    	}
+    </script>
+</html>

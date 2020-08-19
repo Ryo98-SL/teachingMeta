@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>播放模板</title>
+    <link href="./nav_1.css" type="text/css" rel="stylesheet"/>
+    <link href="./bofang_nav.css" type="text/css" rel="stylesheet"/>
+    <link href="./bofang_1.css" type="text/css" rel="stylesheet"/>
+
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+        <div class="bofang_nav_flex">
+            <div class="nav_left">
+                <div class="backButton"><</div>
+                <div id="backWords" class="backContent">音视频播放</div>
+            </div>
+            <div class="nav_right">
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">订阅</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">收藏</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">热度1376</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">更多</div></div>
+                <div class="image_item"><div class="imageContainer"></div><div class="image_content">分享</div></div>
+            </div>
+        </div>
+        <div class="page_body">
+            <div class="video_intro">
+                <div class="video_name video_intro_sub"><div>正在播放:</div><div class="video_entity_name">《金韵 西施浣纱》</div><div class="video_entity_type">韵乐乐享会</div></div>
+                <div class="video_len video_intro_sub"><div>时间 :</div><div class="video_entity_len">07:22</div></div>
+                <div class="video_src video_intro_sub"><div>用户上传时间:</div><div class="video_entity_time">2020年02月02日</div></div>
+            </div>
+            <div  class="video_entity">
+                <video width="980" poster="./videoPoster.png" src="#"  controls>
+
+                </video>
+            </div>
+            <div  class="audio_entity">
+                <audio src="#" width="980px" controls>
+
+                  </audio>
+            </div>
+            <div class="tiny_title tiny" ><div>课程介绍</div></div>
+            <div class="course_intros">
+                <div class="course_intros_icon"></div>
+                <div class="intros_content">&nbsp;&nbsp;周景王元年（公元前544年），吴侵越时所获战俘剌死吴王余祭。周敬王十年（前510年），吴大举攻楚前，为解除后顾之忧，又曾攻越，占领檇李(今浙江嘉兴南）。
+                    十五年，吴军主力在楚都郢时，越乘机侵入吴境，双方矛盾日趋激化。从地缘上看吴国欲争霸中原，必先征服越国，以解除其后方威胁；而越国欲北进中原，更必先征服吴国才能够打通北进中原的通道，因而引起延续二十余年的吴越战争。
+                    两国相互征伐多年直至笠泽之战后，吴、越力量对比发生了根本变化，越已占有绝对优势。周元王元年（前475年），越再度攻吴。吴军无力迎战，据都城防守。越于吴都西南郊筑城，谋长期围困。吴数次遣使请和，均遭越拒绝。三年，城破，吴王夫差自杀，吴国灭亡。</div>
+            </div>
+            <div class="partion"></div>
+            <div class="tiny_title tiny" ><div>主播介绍</div></div>
+            <div class="zhubo_intro">
+                <div class="zhubo_icon"></div>
+                <div class="zhubo_intro_content">易中天（Yi Zhongtian），男，汉族，1947年2月8日出生于湖南长沙，中国知名作家、学者、教育家。1981年毕业于武汉大学中文系中国古代文学专业，获文学硕士学位并留校任教。1992年起任教于厦门大学人文学院中文系 [1]  。2015年4月声明已经退休。
+                    易中天长期从事文学、艺术、美学、心理学、人类学、历史学等研究。著有《〈文心雕龙〉美学思想论稿》《艺术人类学》等作品。
+                </div>
+
+            </div>
+            <div class="tiny_title tiny" ><div>相关推荐</div></div>
+            <div class="course_infos">
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="updownArror">︾</div>
+
+
+
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+</html>

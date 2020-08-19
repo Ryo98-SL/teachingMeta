@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>导航测试</title>
+        <link href="./nav_1.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+            <div class="tiny_title tiny1">
+                <div id="tinty_part1">经典诵读</div>
+                <div id="tinty_part2">视频推荐</div>
+                <div id="tinty_part3"><div id="more_icon"></div>更多...</div>
+            </div>
+            <div class="course_infos">
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div><div>添加收藏</div></div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div><div>热度 1376</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="null"></div>
+            <div class="null"></div>
+            <div class="null"></div>
+            <div class="null"></div>
+            <div class="null"></div>
+            <div class="course_infos">
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course_item">
+                    <div class="course_icon"></div>
+                    <div class="course_detail">
+                        <div class="detail_intro">
+                            <div class="intro_name">《金韵 西施浣纱》</div>
+                            <div class="intro_type">韵乐乐享会</div>
+                        </div>
+                        <div class="detail_time">
+                            <div class="time_videoLen">时长:07:22</div>
+                            <div class="time_putTime">用户上传时间2020年02月02日发布</div>
+                        </div>
+                        <div class="detail_buttons">
+                            <div class="buttons_1 detail_button"><div class="button_icon1 button_icon"></div>添加收藏</div>
+                            <div class="buttons_2 detail_button" ><div class="button_icon2 button_icon"></div>热度 1376</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="updownArror">︾</div>
+        </div>
+    </body >
+</html>

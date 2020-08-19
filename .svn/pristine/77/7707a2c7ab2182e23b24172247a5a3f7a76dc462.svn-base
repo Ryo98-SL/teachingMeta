@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>账号密码登录</title>
+    <link href="./wode_nav.css" type="text/css" rel="stylesheet"/>
+    <link href="./wode_1.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+        <div class="wode_nav_flex">
+            <div class="nav_left">
+                <div class="backButton" onclick="goback()"><</div>
+                <div id="backWords" class="backContent">账号登录</div>
+            </div>
+            <div class="nav_right">
+                <div  class="imageContainer"></div>
+                <div class="imageContainer"></div>
+                <div class="imageContainer"></div>
+            </div>
+        </div>
+        <div class="login_body">
+            <div class="login_title">账号密码</div>
+            <form id="wode3_input">
+            <div class="login_input "><input id="input_element" type="text" placeholder="请输入账号"/></div>
+            <div class="login_input "><input id="input_element" type="password" placeholder="请输入密码"/></div>
+        </form>
+          <div class="login_getCode"><a id="getCode" href="#">登录</a></div>
+          <div class="login_regist"><a id="regist" href="#">注册</a></div>
+          <div class="login_codeTip2 tip">登录表示您已同意<a id="code_tip_contract" href="#">用户服务协议和隐私政策</a></div>
+
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript">
+      function goback() {
+        api.closeWin( { name:'username_login' } );
+      }
+      function openNewWin (winname) {
+      	api.openWin({
+      		name: winname,
+      		url: './'+ winname +'.html',
+      		delay:200
+      	});
+      }
+      apiready = function  () {
+    	}
+    </script>
+</html>

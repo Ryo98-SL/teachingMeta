@@ -1,0 +1,115 @@
+html{
+  font-size: 6px
+}
+div{
+
+    color: rgb(163,163,163);
+  font-size: 1.4375rem;
+}
+body{
+    height:100%;
+}
+.page_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.page_body{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.video_intro{
+    align-self: flex-start;
+    padding: 1.875rem;
+}
+.video_intro_sub{
+    display: flex;
+    margin: 0.3125rem;
+    font-size: 1.8125rem;
+}
+.video_entity{
+    width: 100%;
+    height: 33.75rem;
+}
+.tiny_title{
+    display: flex;
+    justify-content: space-around;
+}
+.tiny>div{
+    position: relative;
+    left: -10.4375rem;
+    font-size: 1.875rem;
+
+}
+.course_infos:nth-child(4) .course_item:nth-child(1) .course_icon{
+    background-image: url(./course_icon1.png);
+}
+.course_infos:nth-child(4) .course_item:nth-child(2) .course_icon{
+    background-image: url(./course_icon1.png);
+}
+.course_infos:nth-child(4) .course_item:nth-child(3) .course_icon{
+    background-image: url(./course_icon1.png);
+}
+.audio_entity{
+    width: 100%;
+    height: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+audio{
+    width: 50%;
+
+}
+.course_intros_icon{
+    background-image: url(./course_intro.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: 4rem;
+    width: 20rem;
+    height: 13.75rem;
+    background-size: 100% 100%;
+    background-position: center center;
+
+}
+.course_intros{
+    display: flex;
+}
+.partion{
+    height: 3.125rem;
+    width: 100%;
+    background-color: rgb(237, 237, 237);
+}
+.zhubo_intro{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.zhubo_icon{
+    background-image: url(./zhubo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80% 80%;
+    width: 12.5rem;
+    height: 12.5rem;
+}
+.intros_content{
+    width: 20.25rem;
+}
+.zhubo_intro_content{
+    width: 41.75rem;
+}
+.course_infos:nth-child(10) .course_item:nth-child(1) .course_icon{
+    background-image: url(./course_icon1.png);
+}
+.course_infos:nth-child(10) .course_item:nth-child(2) .course_icon{
+    background-image: url(./course_icon1.png);
+}
+.course_infos:nth-child(10) .course_item:nth-child(3) .course_icon{
+    background-image: url(./course_icon1.png);
+}

@@ -1,0 +1,85 @@
+html{
+    height: 100%;
+}
+*{
+    margin: 0;
+}
+body{
+    height:100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.login_container{
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.surface_container{
+    background-image: url(./jzyd_icon.png);
+    height: 70%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: 80px -40px;
+    background-repeat: no-repeat;
+}
+.privilegeContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: rgb(193, 24, 33);
+    font-size: 40px;
+}
+.login_button{
+    height: 90px;
+    width: 80%;
+    border-radius: 20px;
+    font-size: 40px;
+    line-height: 90px;
+    text-align: center;
+    margin: 20px;
+}
+.content_itme{
+
+}
+.button1{
+    background-color: rgb(193, 24, 33);
+    color: #fff;
+}
+.button2{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.surface_container2{
+    background-image: url(./jzyd_icon2.png);
+    height: 640px;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#login_container_login2{
+    justify-content: flex-start;
+    height: 90%;
+}
+.partion{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(237, 237, 237);
+}
+#partion_login2{
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+#login2_button1{
+    position: relative;
+    bottom: -600px
+}
+#login2_button2{
+    position: relative;
+    bottom: -600px;
+}

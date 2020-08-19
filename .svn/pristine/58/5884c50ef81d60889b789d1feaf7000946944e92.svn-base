@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>实名认证</title>
+    <link href="./wode_nav.css" type="text/css" rel="stylesheet"/>
+    <link href="./wode_1.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+        <div class="wode_nav_flex">
+            <div class="nav_left" onclick="goback()">
+                <div class="backButton"><</div>
+                <div id="backWords" class="backContent"></div>
+            </div>
+            <div class="nav_right">
+                <div  class="imageContainer"></div>
+                <div class="imageContainer"></div>
+                <div class="imageContainer"></div>
+            </div>
+        </div>
+        <div class="login_body">
+            <div class="login_title">实名认证</div>
+            <div class="login_input"><form><input id="input_element" type="text" placeholder="请输入身份证"/></form></div>
+            <div class="tip" id="wode9_tip">上传身份证正反面</div>
+            <div class="idcard_square">
+                <div class="square_image">+</div>
+                <div class="square_image">+</div>
+
+            </div>
+
+           <div class="partion"></div>
+            <div class="attentions">
+                <div class="attention">注意事项:</div>
+                <div class="attention">
+                <div>自动审核</div>
+                <div>≥200积分以下</div>
+                </div>
+                <div class="attention">
+                <div>人工审核</div>
+                <div>＜200积分</div>
+                </div>
+            </div>
+            <div class="login_getCode"  ><a id="getCode" href="#">下一步</a></div>
+
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript">
+      function goback() {
+        api.closeWin( { name:'personal_auth' } );
+      }
+
+      function openNewWin (winname) {
+      	api.openWin({
+      		name: winname,
+      		url: './'+ winname +'.html',
+      		delay:200
+      	});
+      }
+
+      apiready = function  () {
+    	}
+    </script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>提现</title>
+    <link href="./wode_nav.css" type="text/css" rel="stylesheet"/>
+    <link href="./wode_2.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body style="background-color: rgb(253, 253, 253);">
+        <div class="page_container">
+        <div class="wode_nav_flex">
+            <div class="nav_left" onclick="goback()">
+                <div class="backButton"><</div>
+                <div id="backWords" class="backContent">我的账户</div>
+            </div>
+            <div class="nav_right">
+                <div  class="imageContainer"></div>
+                <div class="imageContainer"></div>
+                <div class="imageContainer"></div>
+            </div>
+        </div>
+        <div class="page_body">
+            <div class="input_item" id="wode8_input_item"><div class="input_label">请输入提现数量 |</div><input id="wode8_inputEntity" class="inputEntity" type="text" placeholder=""/></div>
+            <div class="partion"></div>
+            <div class="submit_button" style=" width: 80%;eight: 70px;border-radius: 30px;
+            background-color: rgb(193, 24, 33);text-align: center;
+            line-height: 4.375rem;margin: 3.75rem;color:#fff;font-size: 2.5rem;" onclick="openNewWin('withdraw_auth')">下一步</div>
+
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript">
+      function goback() {
+        api.closeWin({name:'withdraw'});
+      }
+
+      function openNewWin (winname) {
+      	api.openWin({
+      		name: winname,
+      		url: './'+ winname +'.html',
+      		delay:200
+      	});
+      }
+
+      apiready = function  () {
+    	}
+    </script>
+</html>
