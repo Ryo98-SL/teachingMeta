@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./script/api.js"></script>
+    <title>搜索界面</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+            font-size:16px
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+        .wholeContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .search_icon{
+            margin-left: 20px;
+            background-image: url(./image/header_search.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 70%;
+            width: 20%;
+            height: 100%;
+        }
+        .header{
+          z-index: 10;
+          position: fixed;
+            margin-top: 10px;
+            background-color: #eee;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            height: 3rem;
+        }
+        .search_input{
+            width: 80%;
+            height: 3rem;
+            line-height: 3rem;
+            margin-left: 20px;
+        }
+        .search_input input{
+            width: 80%;
+            background-color: #eee;
+            outline: none;
+            border: none;
+            height: 2rem;
+            font-size: 1.25rem;
+        }
+        #result_count{
+            margin-top: 10px;
+        }
+        .content_item{
+            box-sizing: border-box;
+           width: 98%;
+           height: 2.2rem;
+           line-height: 2.2rem;
+           margin-top:1.5px ;
+           margin-bottom: 1.5px;
+            border-radius: 2px;
+            background-color: #eee;
+            padding-left: 15px;
+            text-align: left;
+            color: #555;
+            position: relative;
+        }
+        .content_item span{
+            position: absolute;
+            right: 5px;
+            font-size: 0.8rem;
+        }
+        .contentArea{
+            margin-top: 4rem;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+    </style>
+</head>
+    <body>
+        <div class="wholeContainer">
+            <div class="header">
+
+                <div class="search_input"><input type="text" placeholder="请输入搜索内容"/></div>
+                  <div class="search_icon"></div>
+            </div>
+
+            <div class="contentArea">
+                <div id="result_count" ></div>
+                <!-- <div class="content_item">幼教视频<span>共200次播放</span></div>
+                <div class="content_item">德育视频<span>共32次播放</span></div>
+                <div class="content_item">听读视频<span>共11次播放</span></div>
+                <div class="content_item">文学视频<span>共44次播放</span></div>
+                <div class="content_item">家园视频<span>共55次播放</span></div>
+                <div class="content_item">指导视频<span>共66次播放</span></div> -->
+            </div>
+        </div>
+
+    </body>
+</html>
+<script>
+    var searchData = []
+    searchData = [{name:'幼教视频',value:{url:'xxx',playTimes:200}},{name:'德育视频',value:{url:'xxx',playTimes:30}},
+    {name:'听读视频',value:{url:'xxx',playTimes:11}},{name:'文学视频',value:{url:'xxx',playTimes:33}}
+    ,{name:'家园视频',value:{url:'xxx',playTimes:21}},{name:'指导视频',value:{url:'xxx',playTimes:44}}]
+    $(document).ready(function(){
+        for(var i=0;i<searchData.length;i++){
+        $('#result_count').after('<div class="content_item">'+searchData[i].name+'<span>'+'共'+searchData[i].value.playTimes+'次播放'+'</span></div>')
+    }
+    var count = searchData.length||0
+    $('#result_count').text('共'+count+'条结果')
+    })
+    apiready = function  () {
+
+        $api.fixStatusBar( $api.dom('.wholeContainer'))
+
+    }
+
+
+
+</script>

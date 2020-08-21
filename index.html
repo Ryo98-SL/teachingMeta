@@ -26,7 +26,8 @@
         img {vertical-align: top;}
 
         #footer{  background-color: #ffffff; }
-        #footer ul li{  height: 2.25rem; padding-top: 1.25rem; padding-bottom: 1px; background: url() no-repeat center 2px; font-size: 0.6rem;background-size: auto 1.1rem; text-align: center; }
+        #footer ul li{  height: 2.25rem; padding-top: 1.25rem; padding-bottom: 1px; background: url() no-repeat center 2px; font-size: 0.6rem;background-size: auto 1.1rem; text-align: center;background-position-y:12px; }
+        #footer ul li:nth-child(2){ background-size: auto 2.55rem;background-position-y:-1.8px }
         #footer ul li.active{ color: #FF6666; }
         #footer ul li:nth-child(1){ background-image: url(./image/shouye.png); }
         #footer ul li:nth-child(2){ background-image: url(./image/faxian.png); }
@@ -174,11 +175,18 @@
           .search-box-shadow{
             box-shadow: 1px 1px 5px 0;
 
+
+          }
+          #hiddenImgArea{
+            position: absolute;
+            height: 10px;
+            width: 10px;
           }
     </style>
 
     <script type="text/javascript">
       localStorage.setItem('api_url',"http://www.987t.top");
+      // localStorage.setItem('user_id',2);
     </script>
 
 </head>
@@ -186,36 +194,36 @@
   <div id="wrap" class="flex-wrap flex-vertical">
       <!-- 第一头部 -->
       <div id="firstHeader" class="titlebar activebar">
-          <div class="egret-header topbar normalHeader">
-              <div class="egret-header-box egret-img fl" onclick="openfindmusic()"><img src="./image/user2.png" alt=""></div>
-              <div class="egret-header-box">
-                  <div class="egret-header-search">
+          <div class="egret-header topbar " id="normalHeader" >
+              <div class="egret-header-box egret-img fl" ><img src="./image/user2.png" alt=""></div>
+              <div class="egret-header-box" >
+                  <div class="egret-header-search" >
                       <img src="./image/header_search.png" alt="">
-                      <input id="top-search" type="text" placeholder="搜索      音视频教程" >
+                      <input id="top-search" type="text"  placeholder="搜索      音视频教程" >
                   </div>
-
+                  <div id="hiddenImgArea"></div>
               </div>
           </div>
           <div class="nav_main">
            <div class="nav_sub nav_sub_1">
                <div class="nav_item nav_item1 active" id="nav_default" onclick="setFrameGroupIndex(0);"><img src="./PNG/tj1.png"/></div>
-               <div class="nav_item nav_item1 " onclick="setFrameGroupIndex(1);"><img src="./PNG/jdsd.png"/></div>
-               <div class="nav_item nav_item1 " onclick="setFrameGroupIndex(2);"><img src="./PNG/sqgs.png"/></div>
-               <div class="nav_item nav_item1 " onclick="setFrameGroupIndex(3);"><img src="./PNG/msjz.png"/></div>
-               <div class="nav_item nav_item1 " onclick="setFrameGroupIndex(4);"><img src="./PNG/gsxt.png"/></div>
+               <div class="nav_item nav_item1 " id="navitem1" onclick="setFrameGroupIndex(1);"><img src="./PNG/jdsd.png"/></div>
+               <div class="nav_item nav_item1 "id="navitem2" onclick="setFrameGroupIndex(2);"><img src="./PNG/sqgs.png"/></div>
+               <div class="nav_item nav_item1 " id="navitem3" onclick="setFrameGroupIndex(3);"><img src="./PNG/msjz.png"/></div>
+               <div class="nav_item nav_item1 " id="navitem4" onclick="setFrameGroupIndex(4);"><img src="./PNG/gsxt.png"/></div>
 
            </div>
            <div class="nav_sub nav_sub_2">
-               <div class="nav_item nav_itme2" onclick="setFrameGroupIndex(5);"><img src="./PNG/dyyy.png"/></div>
-               <div class="nav_item nav_itme2" onclick="setFrameGroupIndex(6);"><img src="./PNG/kcbd.png"/></div>
-               <div class="nav_item nav_itme2" onclick="setFrameGroupIndex(7);"><img src="./PNG/jygy.png"/></div>
-               <div class="nav_item nav_itme2" onclick="setFrameGroupIndex(8);"><img src="./PNG/fczs.png"/></div> <!-- 少一页 -->
+               <div class="nav_item nav_itme2" id="navitem5" onclick="setFrameGroupIndex(5);"><img src="./PNG/dyyy.png"/></div>
+               <div class="nav_item nav_itme2" id="navitem6" onclick="setFrameGroupIndex(6);"><img src="./PNG/kcbd.png"/></div>
+               <div class="nav_item nav_itme2" id="navitem7" onclick="setFrameGroupIndex(7);"><img src="./PNG/jygy.png"/></div>
+               <div class="nav_item nav_itme2"  id="navitem8" onclick="setFrameGroupIndex(8);"><img src="./PNG/fczs.png"/></div> <!-- 少一页 -->
            </div>
-           <div class="egret-header-search-results"  tabindex="2" hidefocus="true">
+           <!-- <div class="egret-header-search-results"  tabindex="2" hidefocus="true">
                <div class="search-result" >睡前故事视频</div>
                <div class="search-result">口才表达视频</div>
                <div id="results-more">显示更多搜索结果</div>
-           </div>
+           </div> -->
          </div>
           <!-- <nav class="navbar" id="firstHeaderIndex">
               <a id="navbar-item-recommend" class="navbar-item navbar-item-active" tapmode="navbar-item-hov" onclick="setFrameGroupIndex(0);">推荐</a>
@@ -234,9 +242,9 @@
     <div id="main" class="flex-con"></div>
     <div id="footer" class="border-t">
         <ul class="flex-wrap" >
-            <li tapmode="activebtn" onclick="switchframe('first_frame');" class="flex-con bottom_btn activebtn activebtn0 active" >首页</li>
-            <li tapmode="activebtn" onclick="switchframe('second_frame');" class="flex-con bottom_btn" >视频播放</li>
-            <li tapmode="activebtn" onclick="switchframe('third_frame');" class="flex-con bottom_btn" >我的</li>
+            <li tapmode="activebtn" onclick="switchframe('first_frame');" class="flex-con bottom_btn activebtn activebtn0 active" ></li>
+            <li tapmode="activebtn" onclick="switchframe('second_frame');" class="flex-con bottom_btn" ></li>
+            <li tapmode="activebtn" onclick="switchframe('third_frame');" class="flex-con bottom_btn" ></li>
         </ul>
     </div>
 </div>
@@ -257,7 +265,7 @@
     var firstHeader = $api.byId('firstHeader');
     var secHeader = $api.byId('secHeader');
     var thirdHeader = $api.byId('thridHeader');
-    var firstHeaderOffset;
+    var firstHeaderOffset =$api.offset(firstHeader);
       var firstHeaderIndexHeight;
 
     var main      = $api.byId('main');
@@ -386,7 +394,7 @@
         firstHeader = $api.byId('firstHeader');
         secHeader = $api.byId('secHeader');
         thirdHeader = $api.byId('thridHeader');
-        var firstHeaderIndex = $api.byId('firstHeaderIndex');
+        var firstHeaderIndex = $api.dom('.nav_main');
 
         // TODO 一定记得修改
         firstHeaderOffset = $api.offset(firstHeader);
@@ -400,8 +408,8 @@
         var footer = $api.byId('footer');
         var footerPos = $api.offset(footer);
 
-        var scrollHeight = $api.dom('.navbar').offsetHeight;
-        $api.byId('navmark').style.width = api.winWidth / 8 + 'px';
+        var scrollHeight = $api.dom('.nav_main').offsetHeight;
+        // $api.byId('navmark').style.width = api.winWidth / 8 + 'px';
         isFirstOpen = true;
         api.setStatusBarStyle({
             style: 'dark',
@@ -476,6 +484,7 @@
             scroll: true
         });
     }
+
 
     /*
     * 第一页，有八个页面组
@@ -598,9 +607,82 @@
     //             break;
     //     }
     // }
+    // function setFrameGroupStatus(frameIndex) {
+    //     switch (frameIndex) {
+    //         case 0:
+    //             {
+    //                 $('.nav_sub_1 div:nth-child(0)').addClass ("active");
+    //                 $('.nav_sub_1 div:nth-child(1)').removeClass ("active");
+    //                 break;
+    //             }
+    //         case 1:
+    //             {
+    //                 $('.nav_sub_1 div:nth-child(0)').removeClass ("active");
+    //                 $('.nav_sub_1 div:nth-child(1)').addClass ("active");
+    //                 $('.nav_sub_1 div:nth-child(2)').removeClass ("active");
+    //                 break;
+    //             }
+    //         case 2:
+    //             {
+    //                 $('.nav_sub_1 div:nth-child(1)').removeClass ("active");
+    //                 $('.nav_sub_1 div:nth-child(2)').addClass ("active");
+    //                 $('.nav_sub_1 div:nth-child(3)').removeClass  ("active");
+    //
+    //                 break;
+    //             }
+    //         case 3:
+    //           {
+    //               $('.nav_sub_1 div:nth-child(2)').removeClass ("active");
+    //               $('.nav_sub_1 div:nth-child(3)').addClass ("active");
+    //               $('.nav_sub_1 div:nth-child(4)').removeClass ("active");
+    //
+    //               break;
+    //           }
+    //         case 4:
+    //             {
+    //               $('.nav_sub_1 div:nth-child(3)').removeClass ("active");
+    //               $('.nav_sub_1 div:nth-child(4)').addClass ("active");
+    //               $('.nav_sub_1 div:nth-child(5)').removeClass ("active");
+    //                 break;
+    //             }
+    //         case 5:
+    //             {
+    //               $('.nav_sub_1 div:nth-child(4)').removeClass ("active");
+    //               $('.nav_sub_2 div:nth-child(0)').addClass ("active");
+    //               $('.nav_sub_2 div:nth-child(1)').removeClass ("active");
+    //                 break;
+    //             }
+    //         case 6:
+    //             {
+    //               $('.nav_sub_2 div:nth-child(0)').removeClass ("active");
+    //               $('.nav_sub_2 div:nth-child(1)').addClass ("active");
+    //               $('.nav_sub_2 div:nth-child(2)').removeClass ("active");
+    //                 break;
+    //             }
+    //         case 7:
+    //           {
+    //             $('.nav_sub_2 div:nth-child(1)').removeClass ("active");
+    //             $('.nav_sub_2 div:nth-child(2)').addClass ("active");
+    //             $('.nav_sub_2 div:nth-child(3)').removeClass ("active");
+    //               break;
+    //           }
+    //           case 8:
+    //             {
+    //               $('.nav_sub_2 div:nth-child(2)').removeClass ("active");
+    //               $('.nav_sub_2 div:nth-child(3)').addClass ("active");
+    //
+    //                 break;
+    //             }
+    //         default:
+    //             break;
+    //     }
+    // }
+
+
 
     // 打开第一个framegroup
     function openFirstFramegroup() {
+      console.log("openFirstFramegroup")
         api.openFrameGroup({
             name: 'framegroup01',
             background: '#FFF',
@@ -650,7 +732,8 @@
                 bounces: false,
             }]
         }, function(ret) {
-            // setFrameGroupStatus(ret.index);
+
+            setFrameGroupStatus(ret.index);
         });
     }
 
@@ -662,12 +745,12 @@
           case 'first_frame':
               randomSwitchBtn('first_frame', 0);
               hideAllFrame();
-              if (isFirstOpen) {
+              // if (ad) {
                   showgroup('framegroup01');
-              } else {
-                  openFirstFramegroup();
-                  isFirstOpen = true;
-              }
+              // } else {
+              //     openFirstFramegroup();
+              //     isFirstOpen = true;
+              // }
               break;
           case 'second_frame':
               randomSwitchBtn('second_frame', 1);
@@ -723,12 +806,83 @@
 </script>
 
 <script>
+var nav_current_active = $("#nav_default")
+var nav_current_active_src = $("#nav_default img").attr("src")
+var indexStr;
+var normalHeader =  document.getElementById('normalHeader');
+
+normalHeader.addEventListener('click',function(event){
+console.log(event.pageX);
+if(event.pageX<45){console.log('img');
+  api.openWin({
+  name: 'page1',
+  url: './html/third_frame/login.html',
+  pageParam: {
+      name: 'test'
+  }
+});}
+
+
+// event.stopPropagation();
+},true)
+// $('.egret-img img').click(function(event){
+//   api.openWin({
+//     name: 'page1',
+//     url: './html/third_frame/login.html',
+//     pageParam: {
+//         name: 'test'
+//     }
+//   });
+// })
+
+
+
+
+function setFrameGroupStatus(frameIndex){
+
+
+      indexStr = '#navitem'+frameIndex
+      if(indexStr == '#navitem0') indexStr = '#nav_default';
+      var sss = '.active img'
+      console.log($(indexStr+' img').attr("src"));
+      console.log(indexStr);
+      console.log(nav_current_active.attr('id'));
+      if(($(indexStr+' img').attr("src")).indexOf('1')==-1){
+        // console.log('------------',nav_current_active_src)
+        // console.log('------------', $(".active img").attr("src"))
+        let storeSrc = [...nav_current_active_src]
+            storeSrc.splice(-5,1)
+        // console.log($(".active img").attr("src"))
+        // console.log(storeSrc.join(""))
+        $(".active img").attr("src",storeSrc.join(""))
+        nav_current_active.removeClass("active")
+
+
+
+        $(indexStr).addClass("active")
+
+        nav_current_active = $(indexStr)
+
+        // console.log($(".active").attr("id"))
+        // console.log($(".active").attr("id") != 'nav_default')
+        if($(".active").attr("id") != 'nav_default'){
+            $(".active img").attr("src",$(".active img").attr("src").slice(0,10)+'1'+$(".active img").attr("src").slice(10))
+            // console.log('xxx')
+        }else{
+            $(".active img").attr("src",$(".active img").attr("src").slice(0,8)+'1'+$(".active img").attr("src").slice(8))
+            // console.log('yyy')
+        }
+        nav_current_active_src =   $(".active img").attr("src")
+      }
+
+
+}
         //    var nav_current_active = document.getElementById("nav_default")
             $(document).ready(function(){
 
 
-            var nav_current_active = $("#nav_default")
-            var nav_current_active_src = $("#nav_default img").attr("src")
+            // var nav_current_active = $("#nav_default")
+            // var nav_current_active_src = $("#nav_default img").attr("src")
             $(".nav_item").click(function(){
                 // console.log('------------',nav_current_active_src)
                 // console.log('------------', $(".active img").attr("src"))
@@ -756,32 +910,53 @@
                 }
                 nav_current_active_src =   $(".active img").attr("src")
             })
+
+
+
                 $(".egret-header-search-results").hide();
-              $("#top-search").focus(function(){
-                $(".egret-header-search-results").slideDown(500);
-                $(".egret-header-search").addClass("search-box-shadow")
-                $(".egret-header-search").attr("autofocus","autofocus")
-              })
-              $(".flex-con,.border-t").mousedown(function(){
-                $(".egret-header-search-results").slideUp(500);
-                $(".egret-header-search").removeClass("search-box-shadow")
-              })
-                var search_state=true
-              $("#results-more").click(function(){
-                if(search_state==true){
-                  $(".egret-header-search-results").animate({height:'200px'})
-                $("#results-more").animate({bottom:'0'})
 
-                $("#results-more").text('收起')
-                search_state = false
-              }else{
-                $(".egret-header-search-results").animate({height:'70px'})
-              $("#results-more").animate({bottom:'0'})
-              $("#results-more").text('显示更多搜索结果')
-              search_state = true
-              }
+              document.getElementById('top-search').addEventListener('click',function(event){
+                    api.openWin({
+                      name:'page2',
+                      url:'./searchPage.html',
+                      pageParam:{
+                        name:'main'
+                      }
+                    })
+                console.log('search');
+                // $(".egret-header-search-results").slideDown(500);
+                // $(".egret-header-search").addClass("search-box-shadow")
+                // $(".egret-header-search").attr("autofocus","autofocus")
+                // event.stopPropagation();
+              },true)
+              // $("#top-search").focus(function(event){
+              //   $(".egret-header-search-results").slideDown(500);
+              //   $(".egret-header-search").addClass("search-box-shadow")
+              //   $(".egret-header-search").attr("autofocus","autofocus")
+              //   event.stopPropagation();
+              //
+              // })
+              // $(".flex-con,.border-t").mousedown(function(){
+              //   $(".egret-header-search-results").slideUp(500);
+              //   $(".egret-header-search").removeClass("search-box-shadow")
+              // })
+              //   var search_state=true
+              // $("#results-more").click(function(){
+              //   if(search_state==true){
+              //     $(".egret-header-search-results").animate({height:'200px'})
+              //   $("#results-more").animate({bottom:'0'})
+              //
+              //   $("#results-more").text('收起')
+              //   search_state = false
+              // }else{
+              //   $(".egret-header-search-results").animate({height:'70px'})
+              // $("#results-more").animate({bottom:'0'})
+              // $("#results-more").text('显示更多搜索结果')
+              // search_state = true
+              // }
+              //
+              // })
 
-              })
             })
 
 

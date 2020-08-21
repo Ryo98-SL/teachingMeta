@@ -127,6 +127,19 @@
 </html>
 <script>
 apiready = function () {
+  api.addEventListener({
+  name:'pause'
+}, function(ret, err){
+  videoPlayer.onResume()
+  alert('应用进入后台');
+});
+api.addEventListener({
+    name:'resume'
+}, function(ret){
+  alert('应用resume');
+    var videoPlayer = api.require('videoPlayer');
+    videoPlayer.onResume();
+});
     $api.fixStatusBar( $api.dom('.topContainer') );
     var video_entity =$api.dom('.video_entity')
     var top_entity =$api.dom('.bofang_nav_flex')
